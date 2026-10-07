@@ -1,0 +1,147 @@
+:root {
+    --primary: #FEA116;
+    --light: #F1F8FF;
+    --dark: #0F172B;
+}
+
+.ff-secondary {
+    font-family: 'Pacifico', cursive;
+}
+
+body {
+    font-family: 'Heebo', sans-serif;
+    background: #FFFFFF;
+    color: #666565;
+}
+
+h1, h2, h3, h4, h5, h6, .fw-bold {
+    font-family: 'Nunito', sans-serif;
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.bg-dark {
+    background-color: var(--dark) !important;
+}
+
+/*** Buttons ***/
+.btn {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn-primary {
+    color: #FFFFFF;
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: #e5900d;
+    border-color: #e5900d;
+    color: #FFFFFF;
+}
+
+/*** Navbar ***/
+.navbar-dark .navbar-nav .nav-link {
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+    margin-right: 25px;
+    padding: 35px 0;
+    color: #FFFFFF;
+    font-size: 17px;
+    font-weight: 600;
+    outline: none;
+    transition: .5s;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+.sticky-top.navbar-dark {
+    position: fixed;
+    background-color: var(--dark) !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+/*** Hero Header & Rotation Animation ***/
+.hero-header {
+    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes imgRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hero-rotating-img {
+    animation: imgRotate 20s linear infinite;
+}
+
+/*** Service Item Hover Animation ***/
+.service-item {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    transition: .5s;
+}
+
+.service-item:hover {
+    background: var(--primary);
+}
+
+.service-item:hover * {
+    color: #FFFFFF !important;
+}
+
+/*** Team Item Hover ***/
+.team-item {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    transition: .5s;
+}
+
+.team-item:hover {
+    transform: translateY(-10px);
+}
+
+/*** Section Title Styles ***/
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 2px;
+    top: 50%;
+    left: -55px;
+    margin-top: -1px;
+    background: var(--primary);
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 2px;
+    top: 50%;
+    right: -55px;
+    margin-top: -1px;
+    background: var(--primary);
+}
